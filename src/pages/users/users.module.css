@@ -1,0 +1,33 @@
+.wrapper {
+  background-color: #47d3ce;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  width: 1100px;
+  border-radius: 5px;
+}
+
+.user {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: rgb(49, 61, 114);
+  font-weight: 600;
+  margin: 30px;
+}
+
+.name {
+  padding-top: 8px;
+}
+
+.paginator {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding-top: 20px;
+  background-color: #66ebe6;
+  height: 50px;
+  border-radius: 3px;
+}

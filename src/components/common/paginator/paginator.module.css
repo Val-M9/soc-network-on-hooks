@@ -1,0 +1,13 @@
+.paginator {
+  justify-content: center;
+}
+
+.button {
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+}
+
+.pages {
+  cursor: pointer;
+}

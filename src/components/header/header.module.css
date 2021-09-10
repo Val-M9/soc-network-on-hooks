@@ -1,0 +1,46 @@
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  width: 1100px;
+  height: 60px;
+  background-color: #e78484;
+  border-radius: 4px;
+  box-shadow: 2px 2px 3px rgb(219, 184, 184);
+}
+
+.pages {
+  display: flex;
+  text-decoration: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 10px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.item.activeLink {
+  color: rgb(141, 63, 63);
+  font-weight: bold;
+}
+
+.image {
+  width: 25px;
+  height: 25px;
+  opacity: 0.6;
+  padding-top: 13px;
+}
+
+.image:hover {
+  opacity: 1;
+}
