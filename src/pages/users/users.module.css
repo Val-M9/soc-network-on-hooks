@@ -47,6 +47,7 @@
   border: 1px solid #32afab;
   border-radius: 2px;
   box-shadow: 1px 1px 1px #32afab;
+  cursor: pointer;
 }
 
 .unfollowBtn {
@@ -58,4 +59,5 @@
   border: 1px solid #32afab;
   border-radius: 2px;
   box-shadow: 1px 1px 1px #32afab;
+  cursor: pointer;
 }
