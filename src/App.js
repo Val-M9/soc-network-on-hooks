@@ -3,6 +3,7 @@ import Header from "./components/header/Header";
 import Profile from "./pages/profile/Profile";
 import "./App.css";
 import Users from "./pages/users/Users";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/profile/:userId?" render={() => <Profile />} />
         <Route path="/users" render={() => <Users />} />
       </div>
+      <Footer />
     </div>
   );
 }

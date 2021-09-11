@@ -20,4 +20,10 @@ export const usersAPI = {
     let response = await api.get(`users?page=${currentPage}&count=${quantityOnPage}`);
     return response.data;
   },
+  follow(userId) {
+    return api.post(`follow/${userId}`);
+  },
+  unfollow(userId) {
+    return api.delete(`follow/${userId}`);
+  },
 };

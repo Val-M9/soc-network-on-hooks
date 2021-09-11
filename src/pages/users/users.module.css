@@ -9,13 +9,19 @@
   border-radius: 5px;
 }
 
-.user {
-  position: relative;
+.userBlock {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: rgb(49, 61, 114);
   font-weight: 600;
-  margin: 30px;
+  margin: 20px 30px 10px 30px;
 }
 
 .name {
@@ -29,5 +35,27 @@
   padding-top: 20px;
   background-color: #66ebe6;
   height: 50px;
-  border-radius: 3px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.followBtn {
+  outline: 0;
+  color: #386cb9;
+  background-color: rgba(255, 255, 255, 0.897);
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid #32afab;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px #32afab;
+}
+
+.unfollowBtn {
+  outline: 0;
+  color: #b93838;
+  background-color: rgba(255, 255, 255, 0.897);
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid #32afab;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px #32afab;
 }

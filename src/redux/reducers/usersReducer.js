@@ -1,4 +1,10 @@
-import { SET_USERS, SET_IS_FETCHING, SET_TOTAL_COUNT, SET_CURRENT_PAGE } from "../constants";
+import {
+  SET_USERS,
+  SET_IS_FETCHING,
+  SET_TOTAL_COUNT,
+  SET_CURRENT_PAGE,
+  TOGGLE_FOLLOWING,
+} from "../constants";
 
 let initialState = {
   users: [],
@@ -6,6 +12,7 @@ let initialState = {
   quantityOnPage: 10,
   totalCount: 0,
   isFetching: false,
+  followingInProgress: [],
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -18,6 +25,16 @@ const usersReducer = (state = initialState, action) => {
       return { ...state, totalCount: action.totalCount };
     case SET_CURRENT_PAGE:
       return { ...state, currentPage: action.page };
+    case TOGGLE_FOLLOWING:
+      return {
+        ...state,
+        users: state.users.map((u) => {
+          if (u.id === action.userId) {
+            return { ...u, followed: !u.followed };
+          }
+          return u;
+        }),
+      };
     default:
       return state;
   }

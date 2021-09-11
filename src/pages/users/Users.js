@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../../redux/actions/users";
+import { fetchUsers, toggleFollowing } from "../../redux/actions/users";
 import style from "./users.module.css";
 import User from "./User";
-import Paginator from "../../components/common/paginator/Paginator";
+import Paginator from "../../components/paginator/Paginator";
 
 export default function Users() {
   const dispatch = useDispatch();
@@ -24,11 +24,15 @@ export default function Users() {
     dispatch(fetchUsers(pageNumber, quantityOnPage));
   };
 
+  const onToggleFollowing = (userId, isFollowed) => {
+    dispatch(toggleFollowing(userId, isFollowed));
+  };
+
   return (
     <>
       <div className={style.wrapper}>
         {users.map((user) => (
-          <User key={user.id} user={user} />
+          <User key={user.id} user={user} onToggleFollowing={onToggleFollowing} />
         ))}
       </div>
       <div className={style.paginator}>

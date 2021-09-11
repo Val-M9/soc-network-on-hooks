@@ -1,4 +1,10 @@
-import { SET_USERS, SET_IS_FETCHING, SET_CURRENT_PAGE, SET_TOTAL_COUNT } from "../constants";
+import {
+  SET_USERS,
+  SET_IS_FETCHING,
+  SET_CURRENT_PAGE,
+  SET_TOTAL_COUNT,
+  TOGGLE_FOLLOWING,
+} from "../constants";
 
 import { usersAPI } from "../../api/api";
 
@@ -22,6 +28,11 @@ const setUsersTotalCount = (totalCount) => ({
   totalCount,
 });
 
+const followUnfollow = (userId) => ({
+  type: TOGGLE_FOLLOWING,
+  userId,
+});
+
 export const fetchUsers = (page, quantityOnPage) => async (dispatch) => {
   dispatch(toggleIsFetching(true));
   dispatch(setCurrentPage(page));
@@ -29,4 +40,18 @@ export const fetchUsers = (page, quantityOnPage) => async (dispatch) => {
   dispatch(toggleIsFetching(false));
   dispatch(setUsers(response.items));
   dispatch(setUsersTotalCount(response.totalCount));
+};
+
+export const toggleFollowing = (userId, isFollowed) => async (dispatch) => {
+  if (isFollowed) {
+    let response = await usersAPI.unfollow(userId);
+    if (response.data.resultCode === 0) {
+      dispatch(followUnfollow(userId));
+    }
+  } else {
+    let response = await usersAPI.follow(userId);
+    if (response.data.resultCode === 0) {
+      dispatch(followUnfollow(userId));
+    }
+  }
 };
