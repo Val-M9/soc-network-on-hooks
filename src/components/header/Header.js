@@ -18,7 +18,7 @@ export default function Header() {
           <img className={style.image} src={contacts} alt="contacts" /> Contacts
         </NavLink>
       </div>
-      <h5>Logout</h5>
+      <NavLink to={"/login"}>Login</NavLink>
     </div>
   );
 }

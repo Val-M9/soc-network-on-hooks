@@ -8,6 +8,18 @@ const api = axios.create({
   },
 });
 
+export const authAPI = {
+  isAuth() {
+    return api.get(`auth/me`);
+  },
+  login(email, password, rememberMe = false) {
+    return api.post(`auth/login`, { email, password, rememberMe });
+  },
+  logout() {
+    return api.delete(`auth/login`);
+  },
+};
+
 export const profileAPI = {
   async getProfile(userId) {
     let response = await api.get(`profile/${userId}`);

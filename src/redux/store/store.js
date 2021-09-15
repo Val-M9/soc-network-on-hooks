@@ -3,8 +3,10 @@ import thunk from "redux-thunk";
 
 import profileReducer from "../reducers/profileReducer";
 import usersReducer from "../reducers/usersReducer";
+import authReducer from "../reducers/authReducer";
 
 const rootReducer = combineReducers({
+  loginPage: authReducer,
   profilePage: profileReducer,
   usersPage: usersReducer,
 });

@@ -42,8 +42,8 @@
   outline: 0;
   color: #386cb9;
   background-color: rgba(255, 255, 255, 0.897);
-  text-align: center;
   font-weight: 500;
+  padding-top: 3px;
   border: 1px solid #32afab;
   border-radius: 2px;
   box-shadow: 1px 1px 1px #32afab;
@@ -54,8 +54,9 @@
   outline: 0;
   color: #b93838;
   background-color: rgba(255, 255, 255, 0.897);
-  text-align: center;
   font-weight: 500;
+  padding-top: 3px;
+
   border: 1px solid #32afab;
   border-radius: 2px;
   box-shadow: 1px 1px 1px #32afab;

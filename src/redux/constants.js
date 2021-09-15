@@ -1,3 +1,5 @@
+export const SET_USER_DATA = "auth/SET-USER-DATA";
+
 export const SET_USER_PROFILE = "profile/SET-USER-PROFILE";
 
 export const SET_USERS = "users/SET-USERS";
